@@ -9,7 +9,7 @@ var config = {
       name: 'homepage'
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/test'
+    db: 'mongodb://localhost/myportfolio'
   },
 
   test: {
@@ -18,7 +18,7 @@ var config = {
       name: 'homepage'
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/homepage-test'
+    db: 'mongodb://localhost/myportfolio'
   },
 
   production: {
@@ -27,7 +27,7 @@ var config = {
       name: 'homepage'
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/homepage-production'
+    db: 'mongodb://localhost/myportfolio'
   }
 };
 
