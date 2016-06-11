@@ -3,7 +3,7 @@ a simple kick-ass portfolio for academic / working individuals
 
 live demo: [wathmal.me](https://wathmal.me)
 
-![alt text](https://wathmal.me/public/my-portfolio-mobile.png "mobile preview")
+![alt text](http://wathmal.me/public/my-portfolio-mobile.png "mobile preview")
 
 
 #### steps to install
