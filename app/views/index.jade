@@ -1,0 +1,166 @@
+extends layout
+
+block content
+  #fullpage
+    #section0.section.active
+      .container-fluid
+        .row
+          .col-md-8
+            .my-container
+              //
+                <div class="heading">I GOW</div>
+              img.pure-img(src='img/brand.png')
+              .welcome
+                b #{config.tagline}
+                br
+                span.element
+              hr
+              .social
+                table.pure-table.pure-table-horizontal
+                  tbody
+                    tr.clickable-row(data-href='#{config.blog}', style='cursor: pointer;')
+                      td
+                        a(href='https://wathmal.me/blog') MY BLOG
+                        i.fa.fa-caret-right.pull-right
+                    tr
+                      td
+                        a.fa.fa-twitter-square(href='#{config.social.twitter}')
+                        | &nbsp;
+                        a.fa.fa-github-square(href='#{config.social.github}')
+                        | &nbsp;
+                        a.fa.fa-linkedin-square(href='#{config.social.linkedin}')
+                        | &nbsp;
+                        a.fa.fa-facebook-square(href='#{config.social.facebook}')
+                        | &nbsp;
+                        a.fa.fa-phone-square(href='#{config.social.phone}')
+                    tr
+                      td
+                        .my-info
+                          b #{config.name}
+                        .my-info
+                          a(href='mailto:#{config.email}') #{config.email}
+                        .my-info
+                          a(href='#{config.website.url}') #{config.website.name}
+                //
+                  <div class="press-down">
+                  go down <i class="fa fa-arrow-circle-down"></i>
+                  </div>
+          .col-md-4.hidden-xs
+            // embed blog here
+            div(style='padding: 20px;')
+              iframe(id='blog-iframe', width='360', height='620', frameborder='0', style='float: right;') browser not compatible.
+    #section1.section
+      each chunk, i in academicProjects
+        div(id='slide#{i}', class='slide', data-anchor='slide#{i}')
+          .container-fluid
+            // title text
+            h2(style='text-align: center;') PROJECTS
+            .row
+              each prj, index in chunk
+                div(class=(index === 2 ? 'col-md-4 col-xs-6 col-xs-offset-3': 'col-md-4 col-xs-6'))
+                  figure(id='project-#{prj.id}', class='clickable-row', data-href='#{prj.url}')
+                    img.project-featured-image(src='img/projects/#{prj.image}', alt='')
+                    figcaption.project-title #{prj.title}
+                    .hidden-xs
+                      each tech in prj.technologies
+                        span.tags #{tech}
+            // navigation text
+            h2(style='text-align: center;')
+              | use&nbsp;
+              i.fa.fa-arrow-circle-left
+              | &nbsp;
+              i.fa.fa-arrow-circle-right
+              |  to navigate
+
+        //#slide1.slide(data-anchor='slide#{i}')
+
+      //
+        #slide1.slide(data-anchor='slide1')
+          .container-fluid
+            // title text
+            h2(style='text-align: center;') PROJECTS
+            .row
+              .col-md-4.col-xs-6
+                figure#project-010.clickable-row(data-href='#')
+                  img.project-featured-image(src='img/projects/project-010.png', alt='')
+                  figcaption.project-title placing the eye on elephant (aliyata asa thabima) awrudu game @ cake labs
+                  .hidden-xs
+                    span.tags ARDUINO
+                    span.tags NODE JS
+              .col-md-4.col-xs-6
+                figure#project-009.clickable-row(data-href='#')
+                  img.project-featured-image(src='img/projects/project-009.png', alt='')
+                  figcaption.project-title smart shoe to measure steps / speed / distance, ran / walked
+                  .hidden-xs
+                    span.tags ARDUINO
+                    span.tags ANDROID
+              .col-md-4.col-xs-6.col-xs-offset-3
+                figure#project-008.clickable-row(data-href='img/projects/original/log7x7.png')
+                  img.project-featured-image(src='img/projects/project-008.png', alt='')
+                  figcaption.project-title an image processing ide with advanced processing functionalities
+                  .hidden-xs
+                    span.tags C++
+                    span.tags QT 5
+            // navigation text
+            h2(style='text-align: center;')
+              | use&nbsp;
+              i.fa.fa-arrow-circle-left
+              | &nbsp;
+              i.fa.fa-arrow-circle-right
+              |  to navigate
+        #slide2.slide(data-anchor='slide2')
+          .container-fluid
+            // title text
+            h2(style='text-align: center;') PROJECTS
+            .row
+              .col-md-4.col-xs-6
+                figure#project-007.clickable-row(data-href='#')
+                  img.project-featured-image(src='img/projects/project-007.png', alt='')
+                  figcaption.project-title a social networking website with basic functionalities
+                  .hidden-xs
+                    span.tags SYMFONY 2
+                    span.tags MYSQL
+                    span.tags BOOTSTRAP
+              .col-md-4.col-xs-6
+                figure#project-006.clickable-row(data-href='#')
+                  img.project-featured-image(src='img/projects/project-006.png', alt='')
+                  figcaption.project-title a personal digital assistant app to track day to day events
+                  .hidden-xs
+                    span.tags ANDROID
+                    span.tags SQLITE
+              .col-md-4.col-xs-6.col-xs-offset-3
+            // navigation text
+            h2(style='text-align: center;')
+              | use&nbsp;
+              i.fa.fa-arrow-circle-left
+              | &nbsp;
+              i.fa.fa-arrow-circle-right
+              |  to navigate
+
+
+block page-scripts
+  script.
+    $(document).ready(function () {
+
+      // not a mobile browser
+      if(screen.width >= 767){
+        $("#blog-iframe").attr("src", "#{config.blog}");
+      }
+
+      $(".clickable-row").click(function () {
+        //            window.document.location = $(this).data("href");
+        window.open($(this).data("href"), '_blank');
+      });
+
+      $('#fullpage').fullpage({
+        sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+        css3: true,
+        scrollingSpeed: 1000
+
+      });
+
+      $(".element").typed({
+        strings: ["#{config.typedtext[0]}", "#{config.typedtext[1]}", "#{config.typedtext[2]}"],
+        typeSpeed: 0
+      });
+    });

@@ -1,0 +1,17 @@
+{
+  "name": "my-portfolio",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "fullpage.js": "^2.8.1",
+    "jquery": "^3.0.0",
+    "typed.js": "typed-js#^1.1.1",
+    "font-awesome": "fontawesome#^4.6.3",
+    "pure": "^0.6.0",
+    "flexboxgrid": "^6.3.0"
+  }
+}
