@@ -1,9 +1,9 @@
 
 
 var express = require('express'),
-  config = require('./config/config'),
-  glob = require('glob'),
-  mongoose = require('mongoose');
+  config = require('./config/config');
+  // glob = require('glob'),
+  // mongoose = require('mongoose');
 
 /*mongoose.connect(config.db);
 var db = mongoose.connection;
