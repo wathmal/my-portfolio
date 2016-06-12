@@ -1,0 +1,10 @@
+{
+  "apps" : [{
+    "script"      : "app.js",
+    "name": "my-portfolio",
+    "watch"       : false,
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }]
+}
