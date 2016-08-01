@@ -4,3 +4,4 @@ public/components
 .idea/workspace.xml
 /public/css/style.css
 .idea/
+/build.sh
