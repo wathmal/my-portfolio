@@ -29,6 +29,7 @@ var config = {
     port: process.env.PORT || 3000,
     db: 'mongodb://localhost/myportfolio'
   }
+  
 };
 
 module.exports = config[env];
