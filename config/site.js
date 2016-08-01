@@ -69,7 +69,6 @@ var site = {
     {name: "author", content: "sasitha sonnadara"}
   ]
 
-
 };
 
 module.exports = site;
