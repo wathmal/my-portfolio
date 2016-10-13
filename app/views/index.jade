@@ -48,7 +48,7 @@ block content
             div(style='padding: 20px;')
               iframe(id='blog-iframe', width='360', height='620', frameborder='0', style='float: right;') browser not compatible.
     #section1.section
-      each chunk, i in academicProjects
+      each chunk, i in projects
         div(id='slide#{i}', class='slide', data-anchor='slide#{i}')
           .container-fluid
             // title text
@@ -69,6 +69,7 @@ block content
               | &nbsp;
               i.fa.fa-arrow-circle-right
               |  to navigate
+    #section2.section
 
 block page-scripts
   script.

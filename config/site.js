@@ -4,7 +4,7 @@
 
 var site = {
   title: "wathmal's",
-  tagline: "hello, i am ..",
+  tagline: "howdy, here lives ..",
   // only 3 allows in index.jade
   typedtext: ["a student", "an undergrad", "just another human"],
   social: {

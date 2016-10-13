@@ -24,6 +24,6 @@ router.get('/', function (req, res, next) {
 
   res.render('index', {
     config: JSON.parse(JSON.stringify(siteConfig)),
-    academicProjects: projectChunks
+    projects: projectChunks
   });
 });
