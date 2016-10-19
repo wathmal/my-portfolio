@@ -14,11 +14,11 @@ var site = {
     facebook: "https://facebook.com/wathmal.iloveyou",
     phone: "tel:+94-71-9968892",
   },
-  blog: "https://wathmal.me/blog/",
+  blog: "http://wathmal.me/blog/",
   name: "SASITHA WATHMAL SONNADARA",
   email: "sasithawathmal@gmail.com",
   website: {
-    url: "https://wathmal.me",
+    url: "http://wathmal.me",
     name: "wathmal.me"
   },
 
