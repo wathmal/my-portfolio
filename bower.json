@@ -12,6 +12,7 @@
     "typed.js": "typed-js#^1.1.1",
     "font-awesome": "fontawesome#^4.6.3",
     "pure": "^0.6.0",
-    "flexboxgrid": "^6.3.0"
+    "flexboxgrid": "^6.3.0",
+    "github-cards": "https://github.com/lepture/github-cards.git#^1.0.2"
   }
 }

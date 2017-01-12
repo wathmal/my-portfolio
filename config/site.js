@@ -25,28 +25,28 @@ var site = {
   projects: [
 
     {
-      id: 6,
+      id: 06,
       title: "a personal digital assistant app to track day to day events",
       image: "project-006.png",
       technologies: ["android", "sqlite"],
       url: "#"
     },
     {
-      id: 7,
+      id: 07,
       title: "a social networking website with basic functionalities",
       image: "project-007.png",
       technologies: ["symfony 2", "mysql", "bootstrap"],
       url: "#"
     },
     {
-      id: 8,
+      id: 08,
       title: "an image processing ide with advanced processing functionalities",
       image: "project-008.png",
       technologies: ["c++", "qt 5"],
       url: "#"
     },
     {
-      id: 9,
+      id: 09,
       title: "smart shoe to measure steps / speed / distance, ran / walked",
       image: "project-009.png",
       technologies: ["arduino", "android"],
@@ -61,6 +61,28 @@ var site = {
     },
 
 
+  ],
+  repos:[
+    {
+      user: 'wathmal',
+      name: 'react-es6-webpack-boilerplate'
+    },
+    {
+      user: 'wathmal',
+      name: 'sinhala-ocr'
+    },
+    {
+      user: 'wathmal',
+      name: 'sms-gateway'
+    },
+    {
+      user: 'wathmal',
+      name: 'my-portfolio'
+    },
+    {
+      user: 'wathmal',
+      name: 'eye-elephant'
+    }
   ],
 
   meta: [

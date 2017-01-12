@@ -20,10 +20,12 @@ router.get('/', function (req, res, next) {
   });*/
   // split project array in to 3 element chunks
   var projectChunks = _.chunk(_.orderBy(siteConfig.projects,['id'],['desc']), 3);
+  var repoChunks = _.chunk(siteConfig.repos, 3);
   // console.log(projectChunks);
 
   res.render('index', {
     config: JSON.parse(JSON.stringify(siteConfig)),
-    projects: projectChunks
+    projects: projectChunks,
+    repos: repoChunks
   });
 });

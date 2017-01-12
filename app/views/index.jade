@@ -55,7 +55,7 @@ block content
             h2(style='text-align: center;') PROJECTS
             .row
               each prj, index in chunk
-                div(class=(index === 2 ? 'col-md-4 col-xs-6 col-xs-offset-3': 'col-md-4 col-xs-6'))
+                div(class=(index === 2 ? 'project col-md-4 col-xs-6 col-xs-offset-3': 'project col-md-4 col-xs-6'))
                   figure(id='project-#{prj.id}', class='clickable-row', data-href='#{prj.url}')
                     img.project-featured-image(src='img/projects/#{prj.image}', alt='')
                     figcaption.project-title #{prj.title}
@@ -70,6 +70,23 @@ block content
               i.fa.fa-arrow-circle-right
               |  to navigate
     #section2.section
+      each chunk, i in repos
+        div(id='slide#{i}', class='slide', data-anchor='slide#{i}')
+          .container-fluid
+            // title text
+            h2(style='text-align: center;') OPEN SOURCED
+            .row
+              each repo, index in chunk
+                div(class=(index === 2 ? 'col-md-4 col-md-offset-4 col-xs-12' : 'col-md-4 col-md-offset-4 col-xs-12'))
+                  iframe(src='/components/github-cards/jsdelivr/cards/default.html?user='+repo.user+'&repo='+ repo.name, width='100%', frameborder='0')
+            // navigation text
+            h2(style='text-align: center;')
+              | use&nbsp;
+              i.fa.fa-arrow-circle-left
+              | &nbsp;
+              i.fa.fa-arrow-circle-right
+              |  to navigate
+
 
 block page-scripts
   script.
@@ -80,16 +97,17 @@ block page-scripts
         $("#blog-iframe").attr("src", "#{config.blog}");
       }
 
-      $(".clickable-row").click(function () {
-        //            window.document.location = $(this).data("href");
-        window.open($(this).data("href"), '_blank');
-      });
 
       $('#fullpage').fullpage({
         sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
         css3: true,
         scrollingSpeed: 1000
 
+      });
+
+      $(".clickable-row").click(function () {
+        //window.document.location = $(this).data("href");
+        window.open($(this).data("href"), '_blank');
       });
 
       $(".element").typed({
