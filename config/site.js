@@ -12,9 +12,12 @@ var site = {
     github: "https://github.com/wathmal",
     linkedin: "https://lk.linkedin.com/in/wathmal",
     facebook: "https://facebook.com/wathmal.iloveyou",
-    phone: "tel:+94-71-9968892",
+    phone: "tel:+94-71-9968892"
   },
   blog: "http://wathmal.me/blog/",
+  // use your own screens hot server or use manet.herokuapp.com (if u don't have a screenshot API)
+  //blogScreenShotURL: "https://manet.herokuapp.com/?url=wathmal.me/blog/&width=480&height=800&clipRect=0,0,542,850",
+  blogScreenShotURL: "http://ec2.wathmal.me/api/manet/?url=wathmal.me/blog&width=480&height=800&clipRect=0,0,542,850",
   name: "SASITHA WATHMAL SONNADARA",
   email: "sasithawathmal@gmail.com",
   website: {
@@ -25,28 +28,28 @@ var site = {
   projects: [
 
     {
-      id: 06,
+      id: 6,
       title: "a personal digital assistant app to track day to day events",
       image: "project-006.png",
       technologies: ["android", "sqlite"],
       url: "#"
     },
     {
-      id: 07,
+      id: 7,
       title: "a social networking website with basic functionalities",
       image: "project-007.png",
       technologies: ["symfony 2", "mysql", "bootstrap"],
       url: "#"
     },
     {
-      id: 08,
+      id: 8,
       title: "an image processing ide with advanced processing functionalities",
       image: "project-008.png",
       technologies: ["c++", "qt 5"],
       url: "#"
     },
     {
-      id: 09,
+      id: 9,
       title: "smart shoe to measure steps / speed / distance, ran / walked",
       image: "project-009.png",
       technologies: ["arduino", "android"],
@@ -82,6 +85,10 @@ var site = {
     {
       user: 'wathmal',
       name: 'eye-elephant'
+    },
+    {
+      user: 'wathmal',
+      name: 'pda-android'
     }
   ],
 

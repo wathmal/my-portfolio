@@ -46,7 +46,8 @@ block content
           .col-md-4.hidden-xs
             // embed blog here
             div(style='padding: 20px;')
-              iframe(id='blog-iframe', width='360', height='620', frameborder='0', style='float: right;') browser not compatible.
+              img(class='pure-img', src='#{config.blogScreenShotURL}', style='margin-left: auto;')
+              //iframe(id='blog-iframe', width='360', height='620', frameborder='0', style='float: right;') browser not compatible.
     #section1.section
       each chunk, i in projects
         div(id='slide#{i}', class='slide', data-anchor='slide#{i}')
@@ -70,22 +71,40 @@ block content
               i.fa.fa-arrow-circle-right
               |  to navigate
     #section2.section
-      each chunk, i in repos
-        div(id='slide#{i}', class='slide', data-anchor='slide#{i}')
-          .container-fluid
-            // title text
-            h2(style='text-align: center;') OPEN SOURCED
-            .row
-              each repo, index in chunk
-                div(class=(index === 2 ? 'col-md-4 col-md-offset-4 col-xs-12' : 'col-md-4 col-md-offset-4 col-xs-12'))
-                  iframe(src='/components/github-cards/jsdelivr/cards/default.html?user='+repo.user+'&repo='+ repo.name, width='100%', frameborder='0')
-            // navigation text
-            h2(style='text-align: center;')
-              | use&nbsp;
-              i.fa.fa-arrow-circle-left
-              | &nbsp;
-              i.fa.fa-arrow-circle-right
-              |  to navigate
+      //div.hidden-xs
+      //  each chunk, i in repos
+      //    div(id='slide#{i}', class='slide', data-anchor='slide#{i}')
+      //      .container-fluid
+      //        // title text
+      //        h2(style='text-align: center;') OPEN SOURCED
+      //        .row
+      //          each repo, index in chunk
+      //            div(class='col-md-4 col-md-offset-4 col-xs-12')
+      //              iframe(src='/components/github-cards/jsdelivr/cards/default.html?user='+repo.user+'&repo='+ repo.name, width='100%', frameborder='0')
+      //        // navigation text
+      //        h2(style='text-align: center;')
+      //          | use&nbsp;
+      //          i.fa.fa-arrow-circle-left
+      //          | &nbsp;
+      //          i.fa.fa-arrow-circle-right
+      //          |  to navigate
+      div.hidden-md
+        each chunk, i in repos
+          div(id='slide#{i}', class='slide', data-anchor='slide#{i}')
+            .container-fluid
+              // title text
+              h2(style='text-align: center;') OPEN SOURCED
+              .row
+                each repo, index in chunk
+                  div(class='col-md-4 col-md-offset-4 col-xs-12')
+                    iframe(src='/components/github-cards/jsdelivr/cards/default.html?user=' + repo.user + '&repo=' + repo.name, width='100%',height='175', frameborder='0')
+              // navigation text
+              h2(style='text-align: center;')
+                | use&nbsp;
+                i.fa.fa-arrow-circle-left
+                | &nbsp;
+                i.fa.fa-arrow-circle-right
+                |  to navigate
 
 
 block page-scripts
