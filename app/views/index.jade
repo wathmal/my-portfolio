@@ -5,7 +5,7 @@ block content
     #section0.section.active
       .container-fluid
         .row
-          .col-md-8
+          .col-md-8.col-lg-8
             .my-container
               img.pure-img(src='img/brand.png')
               .welcome
@@ -43,7 +43,7 @@ block content
                   <div class="press-down">
                   go down <i class="fa fa-arrow-circle-down"></i>
                   </div>
-          .col-md-4.hidden-xs
+          .col-lg-4.hidden-xs.hidden-sm.hidden-md
             // embed blog here
             div(style='padding: 20px;')
               img(class='pure-img', src='#{config.blogScreenShotURL}', style='margin-left: auto;')
@@ -56,7 +56,7 @@ block content
             h2(style='text-align: center;') PROJECTS
             .row
               each prj, index in chunk
-                div(class=(index === 2 ? 'project col-md-4 col-xs-6 col-xs-offset-3': 'project col-md-4 col-xs-6'))
+                div(class=(index === 2 ? 'project col-md-4 col-xs-6 col-xs-offset-3 col-md-offset-0': 'project col-md-4 col-xs-6'))
                   figure(id='project-#{prj.id}', class='clickable-row', data-href='#{prj.url}')
                     img.project-featured-image(src='img/projects/#{prj.image}', alt='')
                     figcaption.project-title #{prj.title}
@@ -88,7 +88,7 @@ block content
       //          | &nbsp;
       //          i.fa.fa-arrow-circle-right
       //          |  to navigate
-      div.hidden-md
+      div
         each chunk, i in repos
           div(id='slide#{i}', class='slide', data-anchor='slide#{i}')
             .container-fluid

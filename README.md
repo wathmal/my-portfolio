@@ -14,4 +14,7 @@ bower install
 gulp
 ```
 
+use **trello** or **github issues** to submit bugs.
+https://trello.com/b/3cgqSXPK
+
 made with ❤❤ in 🇱🇰.

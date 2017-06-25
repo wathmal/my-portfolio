@@ -107,16 +107,18 @@ body{
 
 
 .slide div.project {
-  border-right: 1px solid $border-color;
-  border-bottom:1px solid $border-color;
-  border-top: 1px solid $border-color;
+  border: 1px solid $border-color;
 }
 .slide div.project:first-child {
   border-left: 1px solid $border-color;
   border-top:1px solid $border-color;
 }
 
-
+.slide div.project:last-child {
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+  border-bottom:1px solid $border-color;
+}
 
 
 
@@ -136,12 +138,12 @@ body{
     font-size: 0.8em;
     /*text-align: justify;*/
   }
-
+/*
   .slide div.project {
     border-right: 1px solid $border-color;
     border-bottom:1px solid $border-color;
     border-left: 1px solid $border-color;
-  }
+  }*/
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .hidden-sm {
@@ -153,9 +155,7 @@ body{
     display: none !important;
   }
 
-  .col-xs-offset-3 {
-    margin-left: auto!important;
-  }
+
 }
 @media (min-width: 1200px) {
   .hidden-lg {
