@@ -16,7 +16,7 @@ var site = {
   },
   blog: "http://wathmal.me/blog/",
   // use your own screens hot server or use manet.herokuapp.com (if u don't have a screenshot API)
-  blogScreenShotURL: "https://manet.herokuapp.com/?url=wathmal.me/blog/&width=480&height=800&clipRect=0,0,542,850",
+  blogScreenShotURL: "https://manet.herokuapp.com/?url=blog.wathmal.me/&width=480&height=800&clipRect=0,0,542,850",
   //blogScreenShotURL: "http://ec2.wathmal.me/api/manet/?url=wathmal.me/blog&width=480&height=800&clipRect=0,0,542,850",
   name: "SASITHA WATHMAL SONNADARA",
   email: "sasithawathmal@gmail.com",
