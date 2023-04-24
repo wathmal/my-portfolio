@@ -1,12 +1,13 @@
-# my-portfolio
-a simple kick-ass portfolio for academic / working individuals
+# My-Portfolio
 
-live demo: [wathmal.me](https://wathmal.me)
+My-Portfolio is a simple and impressive portfolio designed for academic and working individuals. You can see the live demo at [wathmal.me](https://wathmal.me).
 
-![alt text](https://raw.githubusercontent.com/wathmal/my-portfolio/master/public/img/my-portfolio-mobile.png "mobile preview")
+![Mobile preview](https://raw.githubusercontent.com/wathmal/my-portfolio/master/public/img/my-portfolio-mobile.png "Mobile preview")
 
+## Steps to Install
 
-#### steps to install
+Follow these steps to install My-Portfolio:
+
 ```
 git clone https://github.com/wathmal/my-portfolio.git
 npm install
@@ -14,7 +15,11 @@ bower install
 gulp
 ```
 
-use **trello** or **github issues** to submit bugs.
-https://trello.com/b/3cgqSXPK
+## Bug Reporting
 
-made with ❤❤ in 🇱🇰.
+If you encounter any bugs while using My-Portfolio, please use Trello or GitHub Issues to submit them. You can find the Trello board at https://trello.com/b/3cgqSXPK.
+
+Made with ❤❤ in 🇱🇰.
+
+
+
